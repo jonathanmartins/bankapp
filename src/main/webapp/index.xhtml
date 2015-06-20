@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Bank - GCM</title>
+	</h:head> 
+	<h:body> 
+		<h:form>
+			<b>Inserir Cliente</b><br/>
+				Nome do Cliente: <h:inputText id="name" value="#{bank.name}"/><br/>
+				<h:commandButton value="Inserir" title="Inserir" action="#{bank.insertClient}"/><br/><br/>
+				
+			<b>Saldo</b><br/>
+				ID da Conta: <h:inputText id="accountIdB" value="#{bank.accountIdB}"/><br/>
+				<h:commandButton value="Saldo" title="Saldo" action="#{bank.getBalance}"/><br/><br/>
+				
+			<b>Depositar</b><br/>
+			
+			- Essa operação credita o valor especificado na conta a sua escolha!
+			
+				ID da Conta: <h:inputText id="accountIdD" value="#{bank.accountIdD}"/><br/>
+				Valor em R$: <h:inputText id="amountD" value="#{bank.amountD}"/><br/>
+				<h:commandButton value="Depositar" title="Depositar" action="#{bank.deposit}"/><br/><br/>
+
+			<b>Sacar</b><br/>
+			
+			- Essa operação adiciona o valor especificado ao saldo da conta que você escolher!
+			
+				ID da Conta: <h:inputText id="accountIdW" value="#{bank.accountIdW}"/><br/>
+				Valor em R$: <h:inputText id="amountW" value="#{bank.amountW}"/><br/>
+				<h:commandButton value="Sacar" title="Sacar" action="#{bank.withdrawal}"/><br/><br/>
+
+			<b>Transferir</b><br/>
+				ID da Conta de Origem: <h:inputText id="accTransfFromId" value="#{bank.accTransfFromId}"/><br/>
+				ID da Conta de Destino: <h:inputText id="accTransfToId" value="#{bank.accTransfToId}"/><br/>
+				Valor em R$: <h:inputText id="amount" value="#{bank.amount}"/><br/>
+				<h:commandButton value="Transferir" title="Transferir" action="#{bank.transfer}"/><br/><br/>
+				
+			<b>Bonus</b><br/>
+				ID da Conta: <h:inputText id="accountIdBonus" value="#{bank.accountIdBonus}"/><br/>
+				<h:commandButton value="Bonus" title="Bonus" action="#{bank.getBonus}"/><br/><br/>
+				
+		</h:form>
+	</h:body>
+</html>
