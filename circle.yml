@@ -1,0 +1,5 @@
+deployment:
+  staging:
+    branch: master
+    commands:
+      - git push git@heroku.com:desolate-cove-2382.git $CIRCLE_SHA1:refs/heads/master
