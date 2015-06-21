@@ -2,4 +2,4 @@ deployment:
   staging:
     branch: master
     heroku: 
-    	appname: desolate-cove-2382
+      appname: desolate-cove-2382
