@@ -27,5 +27,11 @@
   </dependencies>
   <build>
     <finalName>bankapp</finalName>
+     <testSourceDirectory>${project.basedir}/src/test/resources</testSourceDirectory>
+     <testResources>
+      <testResource>
+        <directory>${project.basedir}/src/test/resources</directory>
+      </testResource>
+    </testResources>
   </build>
 </project>
